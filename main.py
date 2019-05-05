@@ -1,2 +1,24 @@
-if __name__ == "__main__":
-    print("muie")
+
+import csv
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+import queue
+import json
+
+# constants
+
+GRID_RESOLUTION = 10**4 # higher res means smaller cells
+CLUSTERED_DIAMETER = 100 # ZxZ clusters
+
+MIN_LAT_IN_DATASET = 16.4078522359116
+MIN_LNG_IN_DATASET = 49.112730179544
+GRID_CORNER_PADDING = 100
+CORNER_LAT_POS = math.floor(MIN_LAT_IN_DATASET * GRID_RESOLUTION) - GRID_CORNER_PADDING
+CORNER_LNG_POS = math.floor(MIN_LNG_IN_DATASET * GRID_RESOLUTION) - GRID_CORNER_PADDING
+GRID_SIZE = 3500
+
+NOCLUSTERS = int(GRID_SIZE / CLUSTERED_DIAMETER)
+
+PERCENT_ITEMS = 0.25
+
