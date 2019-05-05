@@ -1,6 +1,10 @@
+import os
+
 ID = "iEOppYpqhHJIcwGpYdIg"
 CODE = "lTK5u3Uu7uEtUr9d2FE8zA"
 DEFAULT_PLACES_RADIUS = 500
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+PLACES_GRID_CSV = os.path.join(ROOT_DIR, 'clusters.csv')
 
 POI_CATEGORIES = list({
     "car-dealer-repair",
